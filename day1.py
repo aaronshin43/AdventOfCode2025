@@ -1,8 +1,13 @@
 start = 50
 count = 0
 
-N = 10
-rotations = [input() for _ in range(N)]
+rotations = []
+while True:
+    temp = input()
+
+    if not temp:
+        break
+    rotations.append(temp)
 
 rotations = rotations[::-1]
 #print(rotations)
@@ -14,7 +19,11 @@ while rotations:
     #print(direction, number)
 
     if direction == "L":
-        continue
+        number *= -1
 
-    if direction == "R":
-        continue
+    start = (start + number) % 100
+    #print(start)
+    if start == 0:
+        count += 1
+
+print(count)
