@@ -1,4 +1,4 @@
-start = 50
+position = 50
 count = 0
 
 rotations = []
@@ -18,12 +18,16 @@ while rotations:
     number = int(rotation[1:])
     #print(direction, number)
 
-    if direction == "L":
-        number *= -1
+    for _ in range(number):
+        if direction == "L":
+            position = (position - 1) % 100
 
-    start = (start + number) % 100
-    #print(start)
-    if start == 0:
-        count += 1
+        if direction == "R":
+            position = (position + 1) % 100
+        
+        if position == 0:
+            count += 1
 
+    #print(f"rotation: {rotation} / position: {position} / count: {count}")
+    
 print(count)
