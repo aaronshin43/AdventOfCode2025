@@ -8,6 +8,7 @@ while True:
     banks.append(bank)
 #print(banks)
 
+# Part 1
 # total = 0
 # while banks:
 #     currentBank: str = banks.pop()
@@ -27,6 +28,7 @@ while True:
 
 # print(total)
 
+# Part 2
 total = 0
 while banks:
     #subtotal = 0
